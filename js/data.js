@@ -315,7 +315,7 @@ const LEVELS = [
       },
       {
         speaker: 'NARRATOR', color: 'var(--dim)', side: 'none', npc: 'none',
-        text: "Under a bridge.\nOn a highway.\nMarch 5, 2023.\nThe most perfect place\nin the whole world."
+        text: "Under a bridge.\nOn a highway.\nMarch 5, 2024.\nThe most perfect place\nin the whole world."
       },
       {
         speaker: 'NARRATOR', color: 'var(--dim)', side: 'none', npc: 'none',
@@ -401,11 +401,11 @@ const LEVELS = [
       },
       {
         speaker: 'BARKADA 👥', color: 'var(--purple)', side: 'barkada', npc: 'barkada', emotion: '😂',
-        text: "KUYA. YOU MADE IT BACK?\nDID THEY KICK YOU OUT?\nHAHAHA 😂😂😂"
+        text: "Dugaya nimo uy?\n Gaunsa man ka didto??\nHAHAHA 😂😂😂"
       },
       {
         speaker: 'IVAN 🧑‍💻', color: 'var(--green)', side: 'ivan', npc: 'none', emotion: '😑',
-        text: "All of you, sleep.\n...*smiles*"
+        text: "Tan aw movie, hehehehe.\n...*smiles*"
       },
     ],
     reward: "🚪 ACHIEVEMENT: \"STEALTH RATING 2/10\"\nROOM 103 × 105: FOREVER LINKED\nLANDLORD RADAR: EQUIPPED",
