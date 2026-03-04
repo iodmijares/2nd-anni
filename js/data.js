@@ -54,7 +54,7 @@ const LEVELS = [
       },
       {
         speaker: 'BARKADA 👥', color: 'var(--purple)', side: 'barkada', npc: 'barkada', emotion: '😂',
-        text: "HAHAHA SERYOSO?!\nKuya Ivan has a crush!!\n*chaos erupts in Room 105*"
+        text: "HAHAHA SERYOSO?!\nYou have a crush!!\n*chaos erupts in Room 105*"
       },
     ],
     reward: "🎉 QUEST ITEM OBTAINED:\n\"UNO CARD\" — THE BEGINNING\nTITLE: INITIATED",
@@ -389,7 +389,7 @@ const LEVELS = [
       },
       {
         speaker: 'LARA 💬', color: 'var(--red)', side: 'lara', npc: 'none', emotion: '😂',
-        text: "Kuya Ivan.\nTakot ka ba sa\npanginoong bahay? HAHA 😂"
+        text: "Kuya Ivan.\nTakot ka ba sa\nlandlord? HAHA 😂"
       },
       {
         speaker: 'IVAN 🧑‍💻', color: 'var(--green)', side: 'ivan', npc: 'none', emotion: '😤',
