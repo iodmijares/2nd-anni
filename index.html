@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivan & Lara: The RPG 💚</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="game">
+
+        <!-- MUSIC -->
+        <div id="music-bar">
+            <div id="music-note">🎵</div>
+            <button id="music-btn" onclick="toggleMusic()">♪ ON</button>
+        </div>
+
+        <!-- ══ TITLE ══ -->
+        <div id="s-title" class="screen active">
+            <div class="stars-layer" id="title-stars"></div>
+            <div class="title-eyebrow">✦ 2ND ANNIVERSARY EDITION ✦</div>
+            <div class="title-logo">
+                <span class="t-i">IVAN</span> <span class="t-a">&</span><br>
+                <span class="t-l">LARA</span>
+            </div>
+            <div class="title-tagline">
+                FROM STRANGERS TO FOREVER<br>
+                A LOVE STORY RPG — 2ND ANNIVERSARY
+            </div>
+            <div class="title-sprites">
+                <div class="spr-wrap">
+                    <div class="spr" style="font-size:2.8rem;animation-delay:0s">🧑‍💻</div>
+                    <div class="spr-n" style="color:var(--green)">MOMMY</div>
+                    <div class="spr-cls">LVL 99 CARETAKER</div>
+                </div>
+                <div
+                    style="font-family:'Press Start 2P',monospace;font-size:1.2rem;color:var(--yellow);align-self:center;animation:blink 1s steps(1) infinite">
+                    ×</div>
+                <div class="spr-wrap">
+                    <!-- Pixel Lara on title -->
+                    <div class="spr" style="font-size:2.8rem;animation-delay:0.5s">👩🏻‍💻</div>
+                    <div class="spr-n" style="color:var(--red)">DADA</div>
+                    <div class="spr-cls">LVL 99 CS STUDENT</div>
+                </div>
+            </div>
+            <button class="btn-start" onclick="startLoad()">▶ PRESS START</button>
+            <div
+                style="font-family:'Press Start 2P',monospace;font-size:.28rem;color:var(--dim);text-align:center;margin-top:10px;line-height:2.1;position:relative;z-index:1;">
+                ★ MAR 5, 2023 — MAR 5, 2025 ★<br>
+                <span style="font-size:.22rem;">UNIVERSITY OF SOUTHERN MINDANAO</span>
+            </div>
+        </div>
+
+        <!-- ══ LOADING ══ -->
+        <div id="s-load" class="screen">
+            <div class="load-txt" id="load-msg">LOADING...</div>
+            <div class="load-track">
+                <div class="load-fill" id="load-bar"></div>
+            </div>
+            <div class="load-pct" id="load-pct">0%</div>
+        </div>
+
+        <!-- ══ CHAR SELECT ══ -->
+        <div id="s-charselect" class="screen">
+            <div class="stars-layer" id="cs-stars"></div>
+            <div class="cs-title">CHARACTER SELECT</div>
+            <div class="cs-sub">2ND ANNIVERSARY EDITION</div>
+            <div class="cs-cards">
+                <!-- Ivan -->
+                <div class="cs-card" style="border-color:var(--green);">
+                    <div class="ivan-sprite">🧑‍💻</div>
+                    <div class="cs-card-name" style="color:var(--green)">IVAN</div>
+                    <div class="cs-card-class">"MOMMY"<br>ROOM 105<br>MIDSAYAP, COTABATO</div>
+                    <div class="cs-stats">
+                        <div class="cs-stat-row">
+                            <div class="cs-stat-lbl">CARE</div>
+                            <div class="cs-stat-bar">
+                                <div class="cs-stat-fill" style="width:100%;background:var(--green)"></div>
+                            </div>
+                        </div>
+                        <div class="cs-stat-row">
+                            <div class="cs-stat-lbl">LOVE</div>
+                            <div class="cs-stat-bar">
+                                <div class="cs-stat-fill" style="width:95%;background:var(--red)"></div>
+                            </div>
+                        </div>
+                        <div class="cs-stat-row">
+                            <div class="cs-stat-lbl">STEALTH</div>
+                            <div class="cs-stat-bar">
+                                <div class="cs-stat-fill" style="width:18%;background:var(--yellow)"></div>
+                            </div>
+                        </div>
+                        <div class="cs-stat-row">
+                            <div class="cs-stat-lbl">ART</div>
+                            <div class="cs-stat-bar">
+                                <div class="cs-stat-fill" style="width:22%;background:var(--orange)"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        style="font-family:'Press Start 2P',monospace;font-size:.26rem;color:var(--dim);margin-top:8px;line-height:1.8;">
+                        PASSIVE: Shows love<br>through actions,<br>not words.</div>
+                </div>
+                <!-- Lara -->
+                <div class="cs-card" style="border-color:var(--red);">
+                    <div class="ivan-sprite">👩🏻‍💻</div>
+                    <div class="cs-card-name" style="color:var(--red)">LARA</div>
+                    <div class="cs-card-class">"DADA"<br>ROOM 103<br>NEW CORELLA, DAVAO DEL NORTE</div>
+                    <div class="cs-stats">
+                        <div class="cs-stat-row">
+                            <div class="cs-stat-lbl">VOCAL</div>
+                            <div class="cs-stat-bar">
+                                <div class="cs-stat-fill" style="width:99%;background:var(--red)"></div>
+                            </div>
+                        </div>
+                        <div class="cs-stat-row">
+                            <div class="cs-stat-lbl">CARE</div>
+                            <div class="cs-stat-bar">
+                                <div class="cs-stat-fill" style="width:98%;background:var(--green)"></div>
+                            </div>
+                        </div>
+                        <div class="cs-stat-row">
+                            <div class="cs-stat-lbl">CODING</div>
+                            <div class="cs-stat-bar">
+                                <div class="cs-stat-fill" style="width:90%;background:var(--blue)"></div>
+                            </div>
+                        </div>
+                        <div class="cs-stat-row">
+                            <div class="cs-stat-lbl">FOODIE</div>
+                            <div class="cs-stat-bar">
+                                <div class="cs-stat-fill" style="width:95%;background:var(--orange)"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        style="font-family:'Press Start 2P',monospace;font-size:.26rem;color:var(--dim);margin-top:8px;line-height:1.8;">
+                        PASSIVE: Expresses<br>love through words.<br>Loves pasta & Wiwi.</div>
+                </div>
+            </div>
+            <button class="cs-btn cs-btn-green" onclick="goToMap()" style="max-width:260px;margin-top:14px;">▶ START
+                THEIR STORY</button>
+        </div>
+
+        <!-- ══ MAP ══ -->
+        <div id="s-map" class="screen">
+            <div class="map-hdr">🗺 D' BLUE ARC CHRONICLES</div>
+            <div class="map-sub-hdr">THEIR STORY — FROM STRANGERS TO FOREVER</div>
+            <div class="map-timer">
+                <div class="timer-box"><span class="timer-num" id="t-days">—</span><span class="timer-lbl">DAYS</span>
+                </div>
+                <div class="timer-box"><span class="timer-num" id="t-hrs">—</span><span class="timer-lbl">HRS</span>
+                </div>
+                <div class="timer-box"><span class="timer-num" id="t-min">—</span><span class="timer-lbl">MIN</span>
+                </div>
+                <div class="timer-box"><span class="timer-num" id="t-sec">—</span><span class="timer-lbl">SEC</span>
+                </div>
+            </div>
+            <div class="story-progress">
+                <div class="sp-lbl">STORY PROGRESS</div>
+                <div class="sp-track">
+                    <div class="sp-fill" id="sp-fill" style="width:0%"></div>
+                </div>
+            </div>
+            <div class="level-list" id="level-list"></div>
+        </div>
+
+        <!-- ══ DIALOGUE ══ -->
+        <div id="s-dialogue" class="screen">
+            <div class="dial-scene" id="dial-scene">
+                <div class="scene-label" id="scene-label"></div>
+                <div class="dial-sprites" id="dial-sprites">
+                    <div class="dial-spr" id="dspr-ivan">
+                        <div class="dial-spr-emoji">🧑‍💻</div>
+                        <div class="dial-spr-name" style="color:var(--green)">IVAN</div>
+                    </div>
+                    <div class="dial-spr" id="dspr-lara">
+                        <div class="dial-spr-emoji">👩🏻‍💻</div>
+                        <div class="dial-spr-name" style="color:var(--red)">LARA</div>
+                    </div>
+                    <!-- Extra NPC slots -->
+                    <div class="dial-spr hidden" id="dspr-barkada">
+                        <div class="dial-spr-emoji">👥</div>
+                        <div class="dial-spr-name" style="color:var(--purple)">BARKADA</div>
+                    </div>
+                    <div class="dial-spr hidden" id="dspr-kenneth">
+                        <div class="dial-spr-emoji" style="line-height:1"><svg viewBox="0 0 10 16" width="40"
+                                height="64" style="image-rendering:pixelated">
+                                <rect x="3" y="0" width="4" height="2" fill="#1a1a1a" />
+                                <rect x="2" y="1" width="6" height="3" fill="#a06840" />
+                                <rect x="3" y="2" width="4" height="1" fill="#b87850" />
+                                <rect x="3" y="3" width="2" height="1" fill="#2a1a0a" />
+                                <rect x="5" y="3" width="2" height="1" fill="#2a1a0a" />
+                                <rect x="2" y="4" width="6" height="2" fill="#a06840" />
+                                <rect x="3" y="5" width="4" height="1" fill="#b06050" />
+                                <rect x="2" y="6" width="6" height="3" fill="#336633" />
+                                <rect x="1" y="6" width="2" height="3" fill="#224422" />
+                                <rect x="7" y="6" width="2" height="3" fill="#224422" />
+                                <rect x="3" y="9" width="2" height="4" fill="#1a2255" />
+                                <rect x="5" y="9" width="2" height="4" fill="#1a2255" />
+                                <rect x="3" y="13" width="2" height="2" fill="#3d2810" />
+                                <rect x="5" y="13" width="2" height="2" fill="#3d2810" />
+                            </svg></div>
+                        <div class="dial-spr-name" style="color:var(--blue)">KENNETH</div>
+                    </div>
+                    <div class="dial-spr hidden" id="dspr-laragroup">
+                        <div class="dial-spr-emoji" style="line-height:1"><svg viewBox="0 0 24 16" width="72"
+                                height="64" style="image-rendering:pixelated"><!-- Girl 1 Micah -->
+                                <rect x="1" y="0" width="4" height="4" fill="#c8855a" />
+                                <rect x="2" y="3" width="2" height="1" fill="#2a1a0a" />
+                                <rect x="0" y="6" width="6" height="3" fill="#aa3366" />
+                                <rect x="1" y="9" width="2" height="5" fill="#553344" />
+                                <rect x="3" y="9" width="2" height="5" fill="#553344" /><!-- Girl 2 Francis -->
+                                <rect x="9" y="0" width="4" height="4" fill="#b87850" />
+                                <rect x="10" y="3" width="2" height="1" fill="#2a1a0a" />
+                                <rect x="8" y="6" width="6" height="3" fill="#4488aa" />
+                                <rect x="9" y="9" width="2" height="5" fill="#225566" />
+                                <rect x="11" y="9" width="2" height="5" fill="#225566" /><!-- Aldrine guy -->
+                                <rect x="17" y="1" width="4" height="3" fill="#a06840" />
+                                <rect x="18" y="3" width="2" height="1" fill="#2a1a0a" />
+                                <rect x="16" y="6" width="6" height="3" fill="#335588" />
+                                <rect x="17" y="9" width="2" height="4" fill="#223366" />
+                                <rect x="19" y="9" width="2" height="4" fill="#223366" />
+                            </svg></div>
+                        <div class="dial-spr-name" style="color:var(--pink)">MICAH+</div>
+                    </div>
+                </div>
+            </div>
+            <div class="dial-box" id="dial-box" onclick="advanceDialogue()">
+                <div class="dial-speaker" id="dial-speaker"></div>
+                <div class="dial-text" id="dial-text"></div>
+                <div class="dial-next" id="dial-next" style="display:none">▼ TAP TO CONTINUE</div>
+            </div>
+        </div>
+
+        <!-- ══ BOSS ══ -->
+        <div id="s-boss" class="screen" style="padding:13px;">
+            <div class="boss-bg-wrap">
+                <div
+                    style="position:absolute;inset:0;background:radial-gradient(ellipse at 50% 30%,rgba(255,71,87,.07) 0%,transparent 70%);">
+                </div>
+            </div>
+            <div class="boss-arena">
+                <div class="boss-title" id="boss-title">⚔ BOSS BATTLE!</div>
+                <div class="boss-sprite" id="boss-sprite">👾</div>
+                <div class="boss-hp-wrap">
+                    <div class="boss-hp-lbl" id="boss-hp-lbl">BOSS HP: 100%</div>
+                    <div class="boss-hp-track">
+                        <div class="boss-hp-fill" id="boss-hp" style="width:100%"></div>
+                    </div>
+                </div>
+                <div class="boss-question" id="boss-q"></div>
+                <div class="boss-choices" id="boss-choices"></div>
+                <div class="boss-result" id="boss-result"></div>
+            </div>
+        </div>
+
+        <!-- ══ LEVEL CLEAR ══ -->
+        <div id="s-clear" class="screen">
+            <div class="clear-flash"></div>
+            <div style="font-size:3.5rem;margin-bottom:9px" id="clear-icon">⭐</div>
+            <div class="clear-title" id="clear-title">CHAPTER CLEAR!</div>
+            <div class="clear-reward" id="clear-reward"></div>
+            <button class="clear-btn" onclick="afterClear()">CONTINUE ▶</button>
+        </div>
+
+        <!-- ══ GAME OVER ══ -->
+        <div id="s-gameover" class="screen">
+            <div class="go-title">GAME OVER</div>
+            <div style="font-size:3rem;margin-bottom:9px">💀</div>
+            <div class="go-msg" id="go-msg">WRONG ANSWER!</div>
+            <button class="go-btn" id="go-retry">↩ RETRY</button>
+        </div>
+
+        <!-- ══ FINALE ══ -->
+        <div id="s-finale" class="screen">
+            <div class="finale-bg-glow"></div>
+            <div class="finale-stars" id="finale-stars"></div>
+            <div class="finale-badge">🏆 QUEST COMPLETE!<br>2ND ANNIVERSARY — S+ RANK 💚</div>
+            <div class="finale-letter">
+                <div class="finale-letter-head">💬 IVAN → LARA (DADA):</div>
+                <div class="finale-letter-body">
+                    Heello bb,Dada. 💚<br><br>
+                    I still remember that night at DBA like it just happened. You were sitting there with Micah,
+                    Aldrine, and Francis, and I told Kenneth, <em style="color:var(--yellow)">“Apil ta sailaha”</em>
+                    (maybe something like that, hehe). I did not know it then, but that small moment changed a lot for
+                    me. It was honestly the best decision I ever made, because that was the moment you slowly became
+                    part of my life.<br><br>
+                    After Christmas break, when you messaged me, <em style="color:var(--green)">“Kuya Ivan naa naka Blue
+                        Arc?”</em> I remember replying almost instantly when I saw the message. I was excited in a way I
+                    did not even want to admit to myself. Then came all those little moments that only we understand.
+                    That nervous message I sent asking if I could court you. I was so scared sending that, but I knew I
+                    had to try because you already meant so much to me.<br><br>
+                    And then on March 5, we walked and walked until we reached the bus stop near the pilot elementary
+                    school, when you said we were official. That moment is still the happiest memory I have.<br><br>
+                    I know I am not always good with words. I do not know how to show my love to you in a way that will
+                    surely reach you. But I just want you to know and remember that I will always love you, choose you,
+                    and understand you.<br><br>
+                    You changed me in ways I did not expect. Because of you, I try new foods, go to new places, and
+                    experience things I probably would never have tried before. But the truth is, it is not really about
+                    those things. It is about doing them with you. You made my world bigger and warmer at the same
+                    time.<br><br>
+                    So here is to <span style="color:var(--yellow)">March 5, 2026.</span> Our second year together. 💚
+                </div>
+            </div>
+            <div class="achieve-grid">
+                <div class="achieve ach-g">🃏 UNO NIGHT: INITIATED</div>
+                <div class="achieve ach-y">"KUYA IVAN NAA NAKA?" ✅</div>
+                <div class="achieve ach-b">💧 WATER DELIVERY: SUCCESS</div>
+                <div class="achieve ach-y">💬 "YES" RECEIVED: BEST MSG EVER</div>
+                <div class="achieve ach-p">💒 KAABCAN BRIDGE: OFFICIAL SPOT</div>
+                <div class="achieve ach-r">❤️ DADA & MOMMY: CANON</div>
+                <div class="achieve ach-p">🏠 ROOM 103 × 105 BOND</div>
+                <div class="achieve ach-g">💉 SURVIVED THE NEEDLE</div>
+                <div class="achieve ach-y">🎨 UGLY ART: LEGENDARY</div>
+                <div class="achieve ach-r">🌊 CONFLICT ARC: CLEARED</div>
+                <div class="achieve ach-b">⛰️ HOMETOWN QUEST: DONE</div>
+                <div class="achieve ach-g">🐕 WIWI/SKY: ACKNOWLEDGED</div>
+            </div>
+            <button class="finale-btn" onclick="burst()">🎉 CELEBRATE!</button>
+            <!-- SEASON 2 TEASER -->
+            <div
+                style="width:100%;background:var(--black);border:3px solid var(--yellow);padding:16px;margin-top:10px;position:relative;z-index:1;text-align:center;">
+                <div
+                    style="font-family:'Press Start 2P',monospace;font-size:.32rem;color:var(--dim);letter-spacing:2px;margin-bottom:8px;">
+                    📺 COMING SOON</div>
+                <div
+                    style="font-family:'Press Start 2P',monospace;font-size:clamp(.5rem,2.5vw,.75rem);color:var(--yellow);text-shadow:0 0 12px var(--yellow);line-height:1.7;margin-bottom:10px;">
+                    IVAN & LARA<br>
+                    <span style="color:var(--green)">SEASON 2</span>
+                </div>
+                <div
+                    style="font-family:'Press Start 2P',monospace;font-size:.28rem;color:var(--white);line-height:2.1;margin-bottom:10px;">
+                    NEW MAPS TO EXPLORE.<br>
+                    NEW MEMORIES TO MAKE.<br>
+                    NEW FOOD TO TRY TOGETHER.<br>
+                    NEW NIGHTS TO WALK THROUGH.<br>
+                    WIWI FINALLY GETS A CAMEO.<br>
+                    DADA & MOMMY — YEAR 3.
+                </div>
+                <div style="font-family:'Press Start 2P',monospace;font-size:.26rem;color:var(--dim);line-height:2;">
+                    RELEASE DATE:<br>
+                    <span style="color:var(--red)">MARCH 5, 2026</span>
+                </div>
+                <div
+                    style="margin-top:10px;font-size:1.6rem;animation:noteSpin 3s linear infinite;display:inline-block;">
+                    💚</div>
+            </div>
+            <button class="finale-btn blue" onclick="backToMap()" style="margin-top:7px;">↩ REPLAY LEVELS</button>
+        </div>
+
+    </div><!-- /game -->
+
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>
