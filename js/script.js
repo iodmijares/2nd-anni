@@ -209,7 +209,7 @@ function buildSceneBg(type) {
         bg.innerHTML = `<div class="hall-wall"></div><div class="hall-light"></div><div class="door door-103"><div class="door-num">103</div></div><div class="door door-105"><div class="door-num">105</div></div><div class="floor-h"></div>`;
     } else if (type === 'store') {
         bg.classList.add('bg-store');
-        bg.innerHTML = `<div class="store-sky"></div><div class="store-sign">★ MINUTE BURGER ★</div><div class="stall-roof"></div><div class="stall-counter"></div><div class="plastic-chairs">🪑🪑</div><div class="tree tree-l">🌿</div><div class="tree tree-r">🌿</div><div class="street"></div>`;
+        bg.innerHTML = `<div class="store-sky"></div><div class="store-sign">★ LOVE BITES ★</div><div class="stall-roof"></div><div class="stall-counter"></div><div class="plastic-chairs">🪑🪑</div><div class="tree tree-l">🌿</div><div class="tree tree-r">🌿</div><div class="street"></div>`;
     } else if (type === 'street') {
         bg.classList.add('bg-street');
         const stDiv = document.createElement('div'); stDiv.className = 'st-sky';

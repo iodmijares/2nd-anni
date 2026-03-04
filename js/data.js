@@ -322,7 +322,7 @@ const LEVELS = [
         text: "That is why March 5\nwill always mean everything.\nNot just a date.\nTHE date."
       },
     ],
-    reward: "💒 ACHIEVEMENT: OFFICIALLY OFFICIAL!\nLOCATION: KAABCAN BRIDGE\nDATE: MARCH 5, 2023 — FOREVER 💚",
+    reward: "💒 ACHIEVEMENT: OFFICIALLY OFFICIAL!\nLOCATION: KAABCAN BRIDGE\nDATE: MARCH 5, 2024 — FOREVER 💚",
   },
   {
     id: 6, icon: '🌙', name: 'CH.7: NIGHT\nWALKS ERA',
@@ -474,7 +474,7 @@ const LEVELS = [
   {
     id: 9.5, icon: '🍝', name: 'CH.10: THE\nPASTA QUEST',
     color: 'var(--orange)',
-    sceneLabel: '📍 LOVEBITES RESTAURANT — DINNER',
+    sceneLabel: '📍 LOVEBITES RESTAURANT',
     sceneBg: 'store',
     dialogues: [
       {
@@ -499,7 +499,7 @@ const LEVELS = [
       },
       {
         speaker: 'LARA 💬', color: 'var(--red)', side: 'lara', npc: 'none', emotion: '✨',
-        text: "*eating happily*\nOmg ang sarap! 🥺\nThank you Mommy!"
+        text: "*eating happily*\nOmg ang sarap! 🥺\nThank you!"
       },
       {
         speaker: 'IVAN 🧑‍💻', color: 'var(--green)', side: 'ivan', npc: 'none', emotion: '💚',
