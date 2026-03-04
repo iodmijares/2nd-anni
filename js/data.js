@@ -107,7 +107,7 @@ const LEVELS = [
     question: "What was the first thing\nLara messaged Ivan\nafter Christmas break?",
     choices: [
       { text: 'A) "Hi Ivan! kamusta?"', correct: false, roast: 'Too formal! This is Lara! 😂' },
-      { text: 'B) "Kuya Ivan naa naka\nblue arc? HAHAHAH" 💚', correct: true, sweet: 'YES!! The iconic first message! 💚\nPerfect score, Dada!' },
+      { text: 'B) "Kuya Ivan naa naka\nblue arc? HAHAHAH"', correct: true, sweet: 'YES!! The iconic first message! \nPerfect score, Dada!' },
       { text: 'C) "Merry Christmas!"', correct: false, roast: 'That was during break!\nNot after! 🎄' },
       { text: 'D) She called him', correct: false, roast: 'No calls! Just a\nperfect chat message! 📱' },
     ],
@@ -222,10 +222,10 @@ const LEVELS = [
     id: 5, icon: '⚔️', name: 'BOSS: THE\nDATE QUIZ',
     color: 'var(--red)', isBoss: true,
     bossSprite: '🌡️', bossName: 'THE HEAT MONSTER',
-    question: "What happened during\ntheir first date at\nthe small store?",
+    question: "What happened during\ntheir first date at\nthe minute burger?",
     choices: [
       { text: 'A) They stayed and finished\ntheir food there', correct: false, roast: 'Too hot for that! 😂\nThey escaped!' },
-      { text: 'B) It was too hot so they\ntook their food home 🍔', correct: true, sweet: 'CORRECT! The iconic\nhot store escape! 🏃💨' },
+      { text: 'B) It was too hot so they\ntook their food home ', correct: true, sweet: 'CORRECT! The iconic\nhot store escape! 🏃💨' },
       { text: 'C) They ordered pasta', correct: false, roast: 'Lara loves pasta but\nnot on this date! 🍝' },
       { text: 'D) Kenneth was there too', correct: false, roast: 'Just the two of them!\nKenneth stayed behind! 😂' },
     ],
@@ -666,7 +666,7 @@ const LEVELS = [
     question: "What are Ivan & Lara's\nspecial nicknames and\nhow did they start?",
     choices: [
       { text: 'A) Random nicknames\nthey just picked', correct: false, roast: 'There\'s a whole origin story!\nPay attention, Dada! 😂' },
-      { text: 'B) Ivan is "Mommy" because\nhe accidentally acted\nlike a caring mom 💚', correct: true, sweet: 'PERFECT SCORE!! 💚👑\nThe most iconic origin story!\nYou remember everything!' },
+      { text: 'B) Ivan is "Mommy" because\nhe accidentally acted\nlike a caring mom', correct: true, sweet: 'PERFECT SCORE!! 💚👑\nThe most iconic origin story!\nYou remember everything!' },
       { text: 'C) Lara called him\n"Mommy" as a joke', correct: false, roast: 'It wasn\'t a joke —\nit was REAL Mommy energy! 😂' },
       { text: 'D) They both chose\neach other\'s nickname', correct: false, roast: 'Ivan earned it naturally!\nHe didn\'t choose it! 😄' },
     ],
